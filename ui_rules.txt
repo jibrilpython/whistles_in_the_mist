@@ -1,0 +1,42 @@
+1. DESIGN PHILOSOPHY
+Visual: "Block Section Modernism" — the UI draws from the visual language of railway signalling infrastructure: the block diagram, the interlocking frame schematic, the token exchange register. These instruments were the physical embodiment of a single rule — only one train may occupy a section at a time — and the UI should feel like it was designed with that same iron logic. Single-purpose, unambiguous, every element in its correct position. Think a modern rail operations dashboard rebuilt as a collector's archive: authoritative, diagrammatic, and quietly dramatic.
+Mood: authoritative, single-minded, fog-aware, heritage-heavy, signalman-serious.
+Important: No steam cloud illustrations, no track perspective photography used as backgrounds, no vintage railway poster styling. The token and staff systems were precision mechanical computers — the app should feel like their documentation, not their nostalgia. The drama belongs to the objects, not the interface.
+
+2. COLORS
+#F1F2F0 — Main background (signal box white — cool, slightly grey-green, like whitewashed interior walls of a British signal box)
+#0F1410 — Primary text & high-contrast elements (signal black — cool, with the faintest green undertone, like lamp-black paint on a token instrument cabinet)
+#FFFFFF — Secondary panels / card surfaces
+#6B7268 — Secondary text / muted labels (fog grey — cool grey-green, like mist over a rural junction)
+#2D6A3F — Primary accent (signal green — the specific green of a line-clear indication, the green lamp of a block instrument showing the section is unoccupied, the green flag of safe passage. The single most important color in railway safety)
+#E4E6E2 — Outline / stroke / dividers (signal box rule lines, cool grey-green tinted)
+#8B4A1C — Secondary accent (brass staff brown — the warm reddish-brown of a well-used Webb & Thompson staff, the leather of a tablet pouch, the patina on a lock-and-block machine. For era tags, material indicators, and railway line provenance)
+#C0392B — Critical errors only (danger red — line blocked, section occupied, wrong token. In this app, red carries its full historical weight as the color that stopped trains)
+Important: Signal green is the most semantically loaded accent in the series — in railway operation, green means the line is clear and it is safe to proceed. It should carry that same assurance in the UI: green means confirmed, complete, correct. Red in this app is not just a UI error color — it is historically the color that prevented disasters. Use both with the gravity they deserve. The grey-green tint throughout the palette references the specific institutional color of British railway infrastructure — not decorative, deeply contextual.
+
+3. TYPOGRAPHY
+Display / Headings: Archivo (weight 700) — wide, strong, built for signage and infrastructure. Returns here as the typeface of railway system documentation — timetable headers, block register covers, safeworking rule book titles. At large sizes it reads like it was set for a railway company circular. Used for instrument names, section headers, and the app title.
+Body / Descriptions: IBM Plex Sans (weight 300–400) — engineered and neutral. For condition notes, line history, token system descriptions, and all prose fields. Its institutional character suits the railway bureaucracy context.
+Monospace / Identifiers: IBM Plex Mono — for archive codes like WIM-WEBB-STAFF-1897-GBR-LNWR-SHROPSHIRE-012, token numbers (Staff No. 7 of 12), block section references (Up Line — Crewe to Whitchurch), and all structured technical fields.
+Important: Archivo in uppercase for instrument names and section headers — it earns its width when given the full treatment. IBM Plex Sans and Mono handle everything below display size. The Archivo uppercase should feel like a station nameplate or a rule book chapter heading, not a tech company wordmark.
+
+4. SURFACE & TEXTURE LANGUAGE
+
+Backgrounds: flat signal box white — no grain, no noise, no warmth
+Cards: pure white with a 1px border at #E4E6E2 and 10px corner radius — block register cards, clean and precise
+Token profile motif: each list card features a small SVG — a minimal side-profile silhouette of the token type: a staff (long thin rectangle with rounded ends), a tablet (small disc or square), a key token (key-shaped profile), or a lock-and-block instrument face (rectangular with a central circular lock symbol). Rendered in signal green for complete and operational instruments, brass staff brown for display condition. The profile shape is immediately distinctive between token types — a staff looks nothing like a tablet, and the silhouette encodes the entire safeworking system at a glance.
+Token number badge: each card shows the token number and section in IBM Plex Mono — Staff 7/12, Tablet — Up Loop — in a small cool-bordered pill. The defining operational specification.
+Photography: instrument photography on white — the token face, staff engraving, or instrument lock mechanism forward. For staffs, show the full length if possible. For tablets, show the engraved face. No props.
+Railway line provenance tag: small pill showing the originating line or company — LNWR Shropshire, Victorian Railways, GWR Cornwall, Queensland Government — in signal green at 10% opacity fill with full green text
+
+
+5. INTERACTION PRINCIPLES
+
+Transitions: 180–220ms ease-out — clean and rule-governed, like a token physically passing from one hand to another
+Selected state: signal green left-border (3px) + faint #EEF6F0 background tint on active cards
+Empty states: NO INSTRUMENTS ON THIS LINE. in IBM Plex Mono, centered, fog grey — one line
+Loading: a thin signal green progress bar at screen top — immediate onset, no theater
+Navigation: bottom tab bar — four tabs: Line, Route Map, Logbook, Settings. Active tab in signal green.
+Safeworking system filter: a first-class filter chip row — Staff & Ticket, Electric Token, Lock & Block, Key Token, Train Order — because the safeworking system type is the primary technical axis of classification and the first thing a railway historian asks about any token instrument
+
+Important: The token profile SVG on each card is the most operationally literal motif in the series — a Webb & Thompson staff is a distinctive shape that every railway collector recognizes in silhouette, as immediately as a chess piece. The profile IS the classification. Green profile means the instrument is documented and complete. Brown profile means display condition or missing components. This visual grammar should require no legend after the first session of use.
